@@ -10,5 +10,4 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface ShippingMethodRepository extends JpaRepository<ShippingMethod, Long> {
     ShippingMethod findByName(String name);
-    ShippingMethod findByMethodAndPriceLessThanEqual(String name);
 }

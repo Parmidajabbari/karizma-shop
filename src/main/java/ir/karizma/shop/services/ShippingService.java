@@ -29,9 +29,6 @@ public class ShippingService {
         return shippingMethodRepository.findAll().stream().map(shippingMapper::toMethodDto).collect(Collectors.toList());
     }
 
-    public ShippingOptionDTO getShippingMethodByName(String name) {
-        return shippingMapper.toDto(shippingOptionRepository.findByName(name));
-    }
 
     public List<ShippingOptionDTO> getAllShippingOptions() {
         return shippingOptionRepository.findAll().stream().map(shippingMapper::toDto).collect(Collectors.toList());

@@ -12,7 +12,6 @@ import java.math.BigDecimal;
 @Transactional
 public interface ShippingOptionRepository extends JpaRepository<ShippingOption, Long> {
 
-    ShippingOption findByName(String name);
 
     ShippingOption findByMethodAndPriceLessThanEqual(ShippingMethod method, BigDecimal price);
 

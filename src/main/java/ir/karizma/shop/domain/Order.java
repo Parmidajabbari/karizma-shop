@@ -9,7 +9,7 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity(name = "orders")
 @Getter
 @Setter
 public class Order {
