@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/shipping-methods")
 public class ShippingMethodController {
-    private ShippingService shippingService;
+    private final ShippingService shippingService;
 
     public ShippingMethodController(ShippingService shippingService) {
         this.shippingService = shippingService;
