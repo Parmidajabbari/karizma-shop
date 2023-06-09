@@ -25,8 +25,11 @@ public class ProductService {
     }
 
     public ProductDTO getProduct(Long id) {
-        Product product = productRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Product not found"));
-        return productMapper.toDto(product);
+        return productMapper.toDto(getProductEntity(id));
+    }
+
+    public Product getProductEntity(Long id) {
+        return productRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Product not found"));
     }
 
     public ProductDTO saveProduct(ProductDTO product) {
